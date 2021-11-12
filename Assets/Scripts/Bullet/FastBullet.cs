@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FastBullet : MonoBehaviour, IShoot
+public class FastBullet : MonoBehaviour, IBullet
 {
-    public IEnumerator Shoot(float speed)
+    public void SetBulletParameters()
+    {
+        
+    }
+    public IEnumerator Fly(float speed)
     {
         transform.Translate(transform.forward * speed);
         yield return null;
@@ -15,7 +19,7 @@ public class FastBullet : MonoBehaviour, IShoot
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<>()
+            other.GetComponent<Enemy>().TakeDamage(100);
         }
     }
 }

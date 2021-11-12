@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IShoot
+public interface IBullet
 { 
-    IEnumerator Shoot(float speed);
+    IEnumerator Fly(float speed);
 }
