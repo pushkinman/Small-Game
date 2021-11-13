@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponPrefabs:
-  - {fileID: 4638770205085825646, guid: a76cc172d82d94d0386333e2601880c0, type: 3}
+  - {fileID: 4176725498737683226, guid: b45581fc5946c460bb7d515a75b53789, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
