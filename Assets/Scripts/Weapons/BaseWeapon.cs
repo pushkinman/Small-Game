@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Linq;
 using System.Timers;
 using SmallGame.Parameters;
 using UnityEngine;
@@ -10,12 +13,27 @@ namespace SmallGame.Weapons
         [SerializeField] protected Transform bulletSpawnPoint;
         [SerializeField] protected WeaponParameters weaponParameters;
 
-        private bool _canShoot = true;
+        private bool canShoot = true;
 
-        // public void Shoot()
-        // {
-        //     //if (_canShoot)
-        // }
-        public abstract void Shoot();
+        public void FireWeapon()
+        {
+            if (canShoot)
+                StartCoroutine(TryShootBullet());
+        }
+
+        private IEnumerator TryShootBullet()
+        {
+            Shoot();
+            canShoot = false;
+            yield return new WaitForSeconds(1 / weaponParameters.fireRate);
+            canShoot = true;
+        }
+        
+        protected abstract void Shoot();
+
+        private void Update()
+        {
+            Debug.Log(canShoot);
+        }
     }
 }

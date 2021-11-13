@@ -6,7 +6,7 @@ namespace SmallGame.Weapons
 {
     public class AssaultWeapon : BaseWeapon
     {
-        public override void Shoot()
+        protected override void Shoot()
         {
             var obj = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             var bullet = obj.GetComponent<IBullet>();

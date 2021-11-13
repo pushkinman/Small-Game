@@ -11,7 +11,7 @@ namespace SmallGame.Player
 
         public void FireWeapon()
         {
-            CurrentWeapon.Shoot();
+            CurrentWeapon.FireWeapon();
         }
 
         public void MakeGunLookAt(Vector3 objectToLookAt)
