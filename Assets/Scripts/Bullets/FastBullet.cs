@@ -16,11 +16,6 @@ namespace SmallGame.Bullets
             _startPosition = transform.position;
         }
 
-        public void SetBulletParameters(BulletParameters bulletParameters)
-        {
-            _bulletParameters = bulletParameters;
-        }
-
         public void Fly(BulletParameters bulletParameters)
         {
             _bulletParameters = bulletParameters;

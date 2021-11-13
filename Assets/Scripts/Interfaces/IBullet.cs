@@ -6,6 +6,5 @@ namespace SmallGame.Interfaces
     public interface IBullet
     { 
         void Fly(BulletParameters bulletParameters);
-        void SetBulletParameters(BulletParameters bulletParameters);
     }
 }
