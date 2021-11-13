@@ -1,10 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class WeaponParameters
+namespace SmallGame.Parameters
 {
-    public int Damage;
-    public float Range;
-    public float FireRate;
+    [Serializable]
+    public class WeaponParameters
+    {
+        public int damage;
+        public float range;
+        public float fireRate;
+        public float speed;
+    }
 }

@@ -1,13 +1,22 @@
-﻿using UnityEngine;
+﻿using SmallGame.Interfaces;
+using SmallGame.Weapons;
+using UnityEngine;
 
-public class PlayerShoot : MonoBehaviour
+namespace SmallGame.Player
 {
-    
-    
-    private IWeapon _currentWeapon;
-
-    public void ShootBullet()
+    public class PlayerShoot : MonoBehaviour
     {
-        _currentWeapon.Shoot();
+        public BaseWeapon CurrentWeapon { private get; set; }
+        public Transform weaponHolder;
+
+        public void FireWeapon()
+        {
+            CurrentWeapon.Shoot();
+        }
+
+        public void MakeGunLookAt(Vector3 objectToLookAt)
+        {
+            CurrentWeapon.transform.LookAt(objectToLookAt);
+        }
     }
 }

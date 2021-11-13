@@ -1,5 +1,16 @@
-﻿public class BulletParameters
+﻿namespace SmallGame.Parameters
 {
-    public int Damage;
-    public float Range;
+    public class BulletParameters
+    {
+        public int Damage;
+        public float Range;
+        public float Speed;
+
+        public BulletParameters(int damage, float range, float speed)
+        {
+            Damage = damage;
+            Range = range;
+            Speed = speed;
+        }
+    }
 }
